@@ -12,6 +12,7 @@ class Board extends React.Component {
         return (
             <div>
                 <div className="status">{status}</div>
+
                 <div className="board-row">
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
@@ -35,7 +36,7 @@ class Board extends React.Component {
 class Square extends React.Component {
     render() {
         return (
-            <button className="square">
+            <button className="square" onClick={function() { alert('click'); }}>
                 {this.props.value}
             </button>
         );
